@@ -1,0 +1,24 @@
+<div class="app-shell">
+
+    <app-header (menuToggle)="toggleSidebar()">
+    </app-header>
+
+    <mat-sidenav-container class="app-container">
+
+        <mat-sidenav class="app-sidebar" [mode]="sidenavMode()" [opened]="sidebarOpened()">
+
+            <app-sidebar></app-sidebar>
+
+        </mat-sidenav>
+
+        <mat-sidenav-content class="app-content">
+
+            <main class="page-container">
+                <router-outlet></router-outlet>
+            </main>
+
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+</div>
