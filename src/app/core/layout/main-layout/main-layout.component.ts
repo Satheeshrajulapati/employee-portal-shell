@@ -24,8 +24,6 @@ export class MainLayoutComponent {
 
   private readonly breakpointObserver = inject(BreakpointObserver);
 
-  readonly sidebarOpened = signal(true);
-
   private readonly mobileBreakpoint$ =
     this.breakpointObserver
       .observe([
@@ -41,11 +39,21 @@ export class MainLayoutComponent {
     { initialValue: false }
   );
 
+  readonly mobileSidebarOpened = signal(false);
+
   readonly sidenavMode = computed(() =>
     this.isMobile() ? 'over' : 'side'
   );
 
+  readonly sidebarOpened = computed(() =>
+    this.isMobile()
+      ? this.mobileSidebarOpened()
+      : true
+  );
+
   toggleSidebar(): void {
-    this.sidebarOpened.update(opened => !opened);
+    if (this.isMobile()) {
+      this.mobileSidebarOpened.update(opened => !opened);
+    }
   }
 }

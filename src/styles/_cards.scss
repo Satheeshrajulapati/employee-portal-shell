@@ -1,0 +1,19 @@
+@use 'variables' as vars;
+
+.content-card {
+  padding: 20px;
+  background: vars.$surface-color;
+  border-radius: vars.$radius-md;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+}
+
+.card-label {
+  display: block;
+  margin-bottom: 12px;
+  color: vars.$text-secondary;
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: 600;
+}

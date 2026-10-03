@@ -1,8 +1,17 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.dev/guide/theming
+// Angular Material custom theme
 @use '@angular/material' as mat;
 
+// Application reusable styles
+@use 'styles/variables' as vars;
+@use 'styles/typography';
+@use 'styles/layout';
+@use 'styles/cards';
+@use 'styles/buttons';
+@use 'styles/forms';
+@use 'styles/tables';
+@use 'styles/responsive';
+
+// Angular Material theme
 html {
   @include mat.theme((
     color: (
@@ -13,7 +22,23 @@ html {
     typography: Roboto,
     density: 0,
   ));
-}/* You can add global styles to this file, and also import other style files */
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Global base styles
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: vars.$app-background;
+  color: vars.$text-primary;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

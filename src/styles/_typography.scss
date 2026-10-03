@@ -1,0 +1,19 @@
+@use 'variables' as vars;
+
+.page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: vars.$text-primary;
+}
+
+.page-description {
+  margin: vars.$spacing-sm 0 0;
+  color: vars.$text-secondary;
+}
+
+@media (max-width: vars.$mobile) {
+  .page-title {
+    font-size: 20px;
+  }
+}
