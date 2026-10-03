@@ -3,45 +3,23 @@
     <mat-nav-list>
 
         <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link">
+            <mat-icon matListItemIcon>dashboard</mat-icon>
+            <span matListItemTitle>Dashboard</span>
+        </a>
 
-            <mat-icon matListItemIcon>
-                dashboard
-            </mat-icon>
+        <a mat-list-item routerLink="/employees" routerLinkActive="active-link">
+            <mat-icon matListItemIcon>people</mat-icon>
+            <span matListItemTitle>Employees</span>
+        </a>
 
-            <span matListItemTitle>
-                Dashboard
-            </span>
-
+        <a mat-list-item routerLink="/organization" routerLinkActive="active-link">
+            <mat-icon matListItemIcon>business</mat-icon>
+            <span matListItemTitle>Organization</span>
         </a>
 
         <a mat-list-item>
-            <mat-icon matListItemIcon>
-                groups
-            </mat-icon>
-
-            <span matListItemTitle>
-                Employees
-            </span>
-        </a>
-
-        <a mat-list-item>
-            <mat-icon matListItemIcon>
-                corporate_fare
-            </mat-icon>
-
-            <span matListItemTitle>
-                Organization
-            </span>
-        </a>
-
-        <a mat-list-item>
-            <mat-icon matListItemIcon>
-                assessment
-            </mat-icon>
-
-            <span matListItemTitle>
-                Reports
-            </span>
+            <mat-icon matListItemIcon>assessment</mat-icon>
+            <span matListItemTitle>Reports</span>
         </a>
 
     </mat-nav-list>
